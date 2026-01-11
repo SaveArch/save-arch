@@ -4,6 +4,7 @@ import { Footer } from '@/components/Footer';
 import { DigitizationUpload } from '@/components/DigitizationUpload';
 import { HistoricalFacade } from '@/components/HistoricalFacade';
 import { DigitalTwinsGallery } from '@/components/DigitalTwinsGallery';
+import { MonumentAnalyzer } from '@/components/MonumentAnalyzer';
 import { motion } from 'framer-motion';
 import { Camera, Lightbulb, Shield } from 'lucide-react';
 
@@ -58,7 +59,11 @@ const DigitizePage = () => {
               ))}
             </motion.div>
 
-            <DigitizationUpload />
+            {/* AI Analyzer + Upload Side by Side */}
+            <div className="grid lg:grid-cols-2 gap-8">
+              <MonumentAnalyzer />
+              <DigitizationUpload />
+            </div>
           </div>
         </section>
 

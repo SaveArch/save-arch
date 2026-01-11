@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Box, Scan, Eye, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Model3DViewer } from '@/components/Model3DViewer';
 import mausoleumAbstract from '@/assets/mausoleum-abstract.png';
 import wireframeModel from '@/assets/wireframe-model.png';
 
@@ -45,12 +47,14 @@ const digitalTwins: DigitalTwin[] = [
 ];
 
 const statusLabels = {
-  completed: { label: 'Завершено', color: 'bg-green-100 text-green-700' },
-  processing: { label: 'В процессе', color: 'bg-blue-100 text-blue-700' },
-  planned: { label: 'Планируется', color: 'bg-gray-100 text-gray-700' },
+  completed: { label: 'Завершено', color: 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' },
+  processing: { label: 'В процессе', color: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' },
+  planned: { label: 'Планируется', color: 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-400' },
 };
 
 export const DigitalTwinsGallery = () => {
+  const [selectedModel, setSelectedModel] = useState<DigitalTwin | null>(null);
+
   return (
     <section className="section-padding">
       <div className="container-main">
@@ -106,7 +110,8 @@ export const DigitalTwinsGallery = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="card-heritage group"
+              className="card-heritage group cursor-pointer"
+              onClick={() => setSelectedModel(twin)}
             >
               {/* Image */}
               <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
@@ -157,6 +162,15 @@ export const DigitalTwinsGallery = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* 3D Viewer Modal */}
+        {selectedModel && (
+          <Model3DViewer
+            isOpen={!!selectedModel}
+            onClose={() => setSelectedModel(null)}
+            model={selectedModel}
+          />
+        )}
 
         {/* Bottom Note */}
         <motion.p
