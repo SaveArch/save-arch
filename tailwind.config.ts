@@ -56,6 +56,11 @@ export default {
           processing: "hsl(var(--status-processing))",
           closed: "hsl(var(--status-closed))",
         },
+        marker: {
+          risk: "hsl(var(--marker-risk))",
+          human: "hsl(var(--marker-human))",
+          digitized: "hsl(var(--marker-digitized))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

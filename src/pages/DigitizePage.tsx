@@ -2,19 +2,20 @@ import { useSearchParams } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { DigitizationUpload } from '@/components/DigitizationUpload';
-import { SketchfabViewer } from '@/components/SketchfabViewer';
+import { HistoricalFacade } from '@/components/HistoricalFacade';
+import { DigitalTwinsGallery } from '@/components/DigitalTwinsGallery';
 import { motion } from 'framer-motion';
-import { Camera, Box } from 'lucide-react';
+import { Camera, Lightbulb, Shield } from 'lucide-react';
 
 const DigitizePage = () => {
   const [searchParams] = useSearchParams();
-  const modelId = searchParams.get('model') || '9e5af82945d84c7bb0c0a4b92813927e';
 
   return (
     <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
-        <section className="section-padding">
+        {/* Hero Section */}
+        <section className="section-padding gradient-hero">
           <div className="container-main">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -28,42 +29,44 @@ const DigitizePage = () => {
                 Оцифровка памятников
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Создайте 3D-модель памятника для его цифрового сохранения
+                Создайте цифровой двойник памятника для его вечного сохранения
               </p>
             </motion.div>
 
-            <DigitizationUpload />
-
-            {/* 3D Gallery Section */}
+            {/* Key Benefits */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-16"
+              transition={{ delay: 0.2 }}
+              className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12"
             >
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                  <Box className="w-6 h-6 text-accent" />
+              {[
+                { icon: Camera, title: 'Фотограмметрия', desc: '30–60 снимков с перекрытием' },
+                { icon: Lightbulb, title: 'Инновации', desc: 'Современные 3D-технологии' },
+                { icon: Shield, title: 'Сохранение', desc: 'Защита от утраты данных' },
+              ].map((item, index) => (
+                <div
+                  key={item.title}
+                  className="flex flex-col items-center text-center p-6 bg-card/80 backdrop-blur-sm rounded-xl border border-border"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
-                <div>
-                  <h2 className="font-serif text-2xl font-bold">Галерея 3D-моделей</h2>
-                  <p className="text-muted-foreground">Цифровые двойники памятников</p>
-                </div>
-              </div>
-
-              <div className="grid lg:grid-cols-2 gap-8">
-                <SketchfabViewer 
-                  modelId={modelId} 
-                  title="Храм — демонстрационная модель" 
-                />
-                <SketchfabViewer 
-                  modelId="c4edeb0e894441b58e5eb2b9e6cc18b5" 
-                  title="Исторический фасад" 
-                />
-              </div>
+              ))}
             </motion.div>
+
+            <DigitizationUpload />
           </div>
         </section>
+
+        {/* Historical Facade Section */}
+        <HistoricalFacade />
+
+        {/* Digital Twins Gallery */}
+        <DigitalTwinsGallery />
       </main>
       <Footer />
     </div>
