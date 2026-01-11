@@ -58,9 +58,9 @@ export const HowItWorks = () => {
                   <div className="hidden md:block absolute top-16 left-1/2 w-full h-0.5 bg-border z-0" />
                 )}
 
-                <div className="card-heritage p-8 text-center relative z-10 bg-card">
+                <div className="card-heritage p-8 pt-12 text-center relative z-10 bg-card">
                   {/* Step Number */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm">
+                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-lg">
                     {index + 1}
                   </div>
 
