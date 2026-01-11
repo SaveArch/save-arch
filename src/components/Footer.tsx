@@ -41,25 +41,25 @@ export const Footer = () => {
             <h4 className="font-serif font-semibold text-lg mb-4">Контакты</h4>
             <div className="space-y-3">
               <a 
-                href="mailto:info@savearch.ru" 
+                href="mailto:info@savearch.kz" 
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                info@savearch.ru
+                info@savearch.kz
               </a>
               <a 
-                href="tel:+74951234567" 
+                href="tel:+77780472006" 
                 className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                +7 (495) 123-45-67
+                +7 778 047 2006
               </a>
             </div>
           </div>
         </div>
 
         <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground">
-          <p>© 2024 SaveArch. Все права защищены.</p>
+          <p>© 2026 SaveArch. Все права защищены.</p>
         </div>
       </div>
     </footer>

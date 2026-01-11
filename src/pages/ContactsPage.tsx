@@ -50,7 +50,7 @@ const ContactsPage = () => {
                 
                 <div className="space-y-6">
                   <a 
-                    href="mailto:info@savearch.ru"
+                    href="mailto:info@savearch.kz"
                     className="card-heritage p-6 flex items-center gap-4 hover:shadow-elevated transition-shadow"
                   >
                     <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -58,12 +58,12 @@ const ContactsPage = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-lg">Email</div>
-                      <div className="text-muted-foreground">info@savearch.ru</div>
+                      <div className="text-muted-foreground">info@savearch.kz</div>
                     </div>
                   </a>
 
                   <a 
-                    href="tel:+74951234567"
+                    href="tel:+77780472006"
                     className="card-heritage p-6 flex items-center gap-4 hover:shadow-elevated transition-shadow"
                   >
                     <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -71,7 +71,7 @@ const ContactsPage = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-lg">Телефон</div>
-                      <div className="text-muted-foreground">+7 (495) 123-45-67</div>
+                      <div className="text-muted-foreground">+7 778 047 2006</div>
                     </div>
                   </a>
 
@@ -81,7 +81,7 @@ const ContactsPage = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-lg">Адрес</div>
-                      <div className="text-muted-foreground">Москва, ул. Примерная, д. 1</div>
+                      <div className="text-muted-foreground">Атырау, Казахстан</div>
                     </div>
                   </div>
                 </div>
