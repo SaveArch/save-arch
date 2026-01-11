@@ -163,7 +163,7 @@ export const ConceptualMap = ({ className = '' }: ConceptualMapProps) => {
             АТЫРАУ
           </text>
           <text x="50" y="56" fontSize="2" fill="#8B7E6F" textAnchor="middle">
-            Ақтөбе облысы
+            Атырау облысы
           </text>
 
           {/* Grid lines for schematic feel */}

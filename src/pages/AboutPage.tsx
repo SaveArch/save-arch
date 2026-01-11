@@ -72,33 +72,6 @@ const AboutPage = () => {
               })}
             </div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="card-heritage p-8 md:p-12"
-            >
-              <h2 className="font-serif text-3xl font-bold text-center mb-8">Наши достижения</h2>
-              <div className="grid md:grid-cols-4 gap-8 text-center">
-                <div>
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">150+</div>
-                  <div className="text-muted-foreground">Репортов обработано</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">45</div>
-                  <div className="text-muted-foreground">3D-моделей создано</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">200+</div>
-                  <div className="text-muted-foreground">Волонтёров</div>
-                </div>
-                <div>
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">12</div>
-                  <div className="text-muted-foreground">Регионов России</div>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
       </main>
