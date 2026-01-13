@@ -3,8 +3,7 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, AlertTriangle, Eye, Camera, Navigation, Calendar, Info } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { MapPin, AlertTriangle, Eye, Camera, Calendar, Info } from 'lucide-react';
 
 interface HeritageMarker {
   id: string;
@@ -12,97 +11,79 @@ interface HeritageMarker {
   type: 'threat' | 'monitoring' | 'digitized';
   title: string;
   description: string;
-  images: string[];
-  details?: string;
-  date?: string;
-  status?: string;
+  details: string;
+  date: string;
+  status: string;
+  historicalInfo?: string;
 }
 
-// Маркеры ближе к центру Атырау
+// Маркеры в центре Атырау
 const heritageMarkers: HeritageMarker[] = [
   {
     id: '1',
-    coordinates: [51.9156, 46.9512],
+    coordinates: [51.8845, 46.9485], // Площадь Исатай-Махамбет
     type: 'threat',
-    title: 'Мавзолей у реки Урал — береговая эрозия',
-    description: 'Активная эрозия берега реки Урал угрожает археологическому памятнику XIX века.',
-    details: 'Требуется срочный мониторинг и укрепление. Уровень угрозы: критический. За последний год береговая линия отступила на 2 метра. Памятник находится в 50 метрах от берега.',
-    date: 'Обнаружено: 15 января 2026',
-    status: 'Критический',
-    images: [
-      'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop',
-    ],
+    title: 'Памятник Исатаю и Махамбету',
+    description: 'Монумент в честь лидеров народного восстания 1836-1838 годов.',
+    details: 'Бронзовый памятник установлен в 2001 году на центральной площади города. Высота композиции — 7 метров. Обнаружены трещины на постаменте из-за сезонных перепадов температур. Требуется укрепление фундамента.',
+    historicalInfo: 'Исатай Тайманов и Махамбет Утемисов — национальные герои Казахстана, возглавившие восстание против Хивинского ханства и колониальной политики.',
+    date: 'Осмотр: 10 января 2026',
+    status: 'Требует внимания',
   },
   {
     id: '2',
-    coordinates: [51.8723, 46.9398],
+    coordinates: [51.9234, 46.9567], // Возле Инфинити Молл
     type: 'threat',
-    title: 'Старое кладбище — разрушение надгробий',
-    description: 'Исторический некрополь с уникальными каменными надгробиями подвергается разрушению.',
-    details: 'Обнаружены следы вандализма и естественного износа. 15 надгробий требуют реставрации. Датировка: XVIII-XIX века.',
-    date: 'Обнаружено: 20 декабря 2025',
-    status: 'Высокий',
-    images: [
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1504893524553-b855bce32c67?w=800&h=600&fit=crop',
-    ],
+    title: 'Старый купеческий дом',
+    description: 'Здание конца XIX века, принадлежавшее купеческой семье.',
+    details: 'Двухэтажное кирпичное здание с элементами эклектики. Фасад сильно повреждён, оконные проёмы частично разрушены. Угроза обрушения кровли. Необходима срочная консервация.',
+    historicalInfo: 'В этом доме в начале XX века располагался один из первых торговых домов Гурьева (старое название Атырау).',
+    date: 'Обнаружено: 5 января 2026',
+    status: 'Критический',
   },
   {
     id: '3',
-    coordinates: [51.9287, 46.9645],
+    coordinates: [51.8956, 46.9512], // Набережная
     type: 'monitoring',
-    title: 'Исторический центр — застройка',
-    description: 'Мониторинг воздействия городского развития на исторические здания.',
-    details: 'Ведётся наблюдение за строительными работами в охранной зоне. Еженедельные проверки состояния 12 зданий исторической застройки.',
-    date: 'Мониторинг с: 1 ноября 2025',
+    title: 'Мечеть Имангали',
+    description: 'Историческая мечеть, построенная в 1870-х годах.',
+    details: 'Одна из старейших мечетей Атырау. Кирпичная постройка с минаретом высотой 12 метров. Проводится регулярный мониторинг состояния стен. Небольшие трещины стабилизированы.',
+    historicalInfo: 'Мечеть была закрыта в советское время и использовалась как склад. Восстановлена в 1990-х годах.',
+    date: 'Мониторинг с: ноябрь 2025',
     status: 'Стабильный',
-    images: [
-      'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&h=600&fit=crop',
-    ],
   },
   {
     id: '4',
-    coordinates: [51.8945, 46.9723],
+    coordinates: [51.9012, 46.9623], // Ближе к центру
     type: 'monitoring',
-    title: 'Набережная Урала — археологический слой',
-    description: 'Обнаружены артефакты при проведении работ на набережной.',
-    details: 'Культурный слой датируется XVII-XVIII веками. Найдены фрагменты керамики и металлические изделия. Работы приостановлены до завершения исследований.',
-    date: 'Мониторинг с: 5 января 2026',
+    title: 'Здание старой гимназии',
+    description: 'Учебное заведение начала XX века.',
+    details: 'Здание построено в 1905 году. Классический стиль с колоннами. Ведётся наблюдение за состоянием фундамента из-за близости к реке Урал. Ежемесячные замеры уровня грунтовых вод.',
+    historicalInfo: 'В этой гимназии учились многие известные деятели казахской культуры и науки.',
+    date: 'Мониторинг с: сентябрь 2025',
     status: 'Под наблюдением',
-    images: [
-      'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&h=600&fit=crop',
-    ],
   },
   {
     id: '5',
-    coordinates: [51.9034, 46.9456],
+    coordinates: [51.8789, 46.9534], // Старый город
     type: 'digitized',
-    title: 'Мечеть Имангали',
-    description: 'Историческая мечеть XIX века полностью оцифрована методом фотограмметрии.',
-    details: 'Высокоточная 3D-модель создана в 2025 году. Модель включает 45 млн полигонов и текстуры 8K разрешения. Доступна для виртуальных экскурсий.',
+    title: 'Дом-музей Курмангазы',
+    description: 'Мемориальный музей великого казахского композитора.',
+    details: 'Музей открыт в 1985 году. Полная 3D-модель создана методом фотограмметрии с точностью до 2 мм. Оцифрованы все экспонаты и интерьеры. Доступен виртуальный тур.',
+    historicalInfo: 'Курмангазы Сагырбайулы (1823-1896) — легендарный кюйши, чьи произведения включены в список нематериального наследия ЮНЕСКО.',
     date: 'Оцифровано: октябрь 2025',
     status: 'Завершено',
-    images: [
-      'https://images.unsplash.com/photo-1564769625905-50e93615e769?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1519817914152-22d216bb9170?w=800&h=600&fit=crop',
-    ],
   },
   {
     id: '6',
-    coordinates: [51.9412, 46.9534],
+    coordinates: [51.9123, 46.9445], // Другая часть города
     type: 'digitized',
-    title: 'Купеческий дом Курмангазы',
-    description: 'Памятник архитектуры начала XX века. Создан цифровой двойник.',
-    details: 'Лазерное сканирование и фотограмметрия выполнены совместно с краеведческим музеем. Модель используется для планирования реставрационных работ.',
-    date: 'Оцифровано: ноябрь 2025',
+    title: 'Успенский собор',
+    description: 'Православный храм, построенный в 1890-х годах.',
+    details: 'Храм в русско-византийском стиле. Лазерное сканирование выполнено в 2025 году. Создана точная 3D-модель с 50 млн полигонов. Модель используется для планирования реставрации куполов.',
+    historicalInfo: 'Собор был закрыт в 1930-х годах, использовался как зернохранилище. Возвращён верующим в 1991 году.',
+    date: 'Оцифровано: декабрь 2025',
     status: 'Завершено',
-    images: [
-      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1524230572899-a752b3835840?w=800&h=600&fit=crop',
-    ],
   },
 ];
 
@@ -279,22 +260,6 @@ export const AtyrauMapbox = ({ className = '' }: AtyrauMapboxProps) => {
     };
   }, []);
 
-  const handleNextImage = () => {
-    if (selectedMarker) {
-      setCurrentImageIndex((prev) => 
-        prev < selectedMarker.images.length - 1 ? prev + 1 : 0
-      );
-    }
-  };
-
-  const handlePrevImage = () => {
-    if (selectedMarker) {
-      setCurrentImageIndex((prev) => 
-        prev > 0 ? prev - 1 : selectedMarker.images.length - 1
-      );
-    }
-  };
-
   return (
     <div className={`relative ${className}`}>
       {/* Map Container with solid background to hide pattern */}
@@ -337,11 +302,9 @@ export const AtyrauMapbox = ({ className = '' }: AtyrauMapboxProps) => {
                   >
                     {markerStyles[selectedMarker.type].label}
                   </Badge>
-                  {selectedMarker.status && (
-                    <Badge variant="outline" className="text-xs">
-                      {selectedMarker.status}
-                    </Badge>
-                  )}
+                  <Badge variant="outline" className="text-xs">
+                    {selectedMarker.status}
+                  </Badge>
                 </div>
                 <DialogTitle className="font-serif text-xl md:text-2xl pr-8">
                   {selectedMarker.title}
@@ -351,63 +314,31 @@ export const AtyrauMapbox = ({ className = '' }: AtyrauMapboxProps) => {
                 </DialogDescription>
               </DialogHeader>
 
-              {/* Image Gallery */}
-              <div className="relative mt-4">
-                <div className="aspect-video rounded-xl overflow-hidden bg-muted">
-                  <img
-                    src={selectedMarker.images[currentImageIndex]}
-                    alt={selectedMarker.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                {/* Image Navigation */}
-                {selectedMarker.images.length > 1 && (
-                  <>
-                    <button
-                      onClick={handlePrevImage}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
-                    >
-                      ←
-                    </button>
-                    <button
-                      onClick={handleNextImage}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
-                    >
-                      →
-                    </button>
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 bg-black/40 px-3 py-1.5 rounded-full backdrop-blur-sm">
-                      {selectedMarker.images.map((_, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => setCurrentImageIndex(idx)}
-                          className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                            idx === currentImageIndex ? 'bg-white' : 'bg-white/40 hover:bg-white/60'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
+              {/* Date info */}
+              <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+                <Calendar className="w-4 h-4" />
+                {selectedMarker.date}
               </div>
 
-              {/* Date info */}
-              {selectedMarker.date && (
-                <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
-                  <Calendar className="w-4 h-4" />
-                  {selectedMarker.date}
-                </div>
-              )}
-
               {/* Details */}
-              {selectedMarker.details && (
-                <div className="mt-4 p-4 bg-secondary/50 rounded-xl border border-border">
-                  <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                    <Info className="w-4 h-4 text-primary" />
-                    Подробная информация
+              <div className="mt-4 p-4 bg-secondary/50 rounded-xl border border-border">
+                <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                  <Info className="w-4 h-4 text-primary" />
+                  Состояние объекта
+                </h4>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {selectedMarker.details}
+                </p>
+              </div>
+
+              {/* Historical info */}
+              {selectedMarker.historicalInfo && (
+                <div className="mt-4 p-4 bg-primary/5 rounded-xl border border-primary/20">
+                  <h4 className="font-semibold text-foreground mb-2">
+                    📜 Историческая справка
                   </h4>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    {selectedMarker.details}
+                    {selectedMarker.historicalInfo}
                   </p>
                 </div>
               )}
@@ -424,23 +355,6 @@ export const AtyrauMapbox = ({ className = '' }: AtyrauMapboxProps) => {
                 <p className="text-sm text-muted-foreground mt-1">
                   Регион: Атырауская область, г. Атырау
                 </p>
-              </div>
-
-              {/* Actions */}
-              <div className="mt-4 flex gap-3 flex-wrap">
-                <Button 
-                  variant="outline" 
-                  size="sm"
-                  onClick={() => {
-                    window.open(
-                      `https://www.google.com/maps?q=${selectedMarker.coordinates[1]},${selectedMarker.coordinates[0]}`,
-                      '_blank'
-                    );
-                  }}
-                >
-                  <Navigation className="w-4 h-4 mr-2" />
-                  Открыть в Google Maps
-                </Button>
               </div>
             </>
           )}
