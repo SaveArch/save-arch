@@ -1,6 +1,6 @@
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
-import { ConceptualMap } from '@/components/ConceptualMap';
+import { AtyrauMapbox } from '@/components/AtyrauMapbox';
 import { motion } from 'framer-motion';
 import { MapPin, Layers, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -59,7 +59,7 @@ const MapPage = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
             >
-              <ConceptualMap />
+              <AtyrauMapbox />
             </motion.div>
 
             {/* Action Buttons */}
