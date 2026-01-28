@@ -354,7 +354,7 @@ export const AtyrauMapbox = ({ className = '' }: AtyrauMapboxProps) => {
                   Координаты: {selectedMarker.coordinates[1].toFixed(5)}°N, {selectedMarker.coordinates[0].toFixed(5)}°E
                 </p>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Регион: Атырауская область, г. Атырау
+                  Планета: Земля
                 </p>
               </div>
             </>
