@@ -39,15 +39,15 @@ const MapPage = () => {
               transition={{ delay: 0.1 }}
               className="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-10"
             >
-              <div className="text-center p-4 bg-card rounded-xl border border-border">
+              <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
                 <p className="text-2xl font-bold text-destructive">2</p>
                 <p className="text-xs text-muted-foreground">Под угрозой</p>
               </div>
-              <div className="text-center p-4 bg-card rounded-xl border border-border">
+              <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
                 <p className="text-2xl font-bold text-orange-500">2</p>
                 <p className="text-xs text-muted-foreground">Мониторинг</p>
               </div>
-              <div className="text-center p-4 bg-card rounded-xl border border-border">
+              <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
                 <p className="text-2xl font-bold text-primary">2</p>
                 <p className="text-xs text-muted-foreground">Оцифровано</p>
               </div>
@@ -88,16 +88,15 @@ const MapPage = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="mt-12 p-6 bg-secondary/50 rounded-2xl border border-border max-w-2xl mx-auto"
+              className="mt-12 p-6 bg-card/70 backdrop-blur-sm rounded-2xl border border-border max-w-2xl mx-auto shadow-sm"
             >
               <h3 className="font-semibold text-foreground mb-2 text-center">
                 О системе мониторинга
               </h3>
               <p className="text-sm text-muted-foreground text-center">
-                Данная карта является концептуальной визуализацией системы мониторинга 
-                культурного наследия. Маркеры отображают типы угроз: климатические риски 
-                (эрозия, изменение уровня воды), антропогенные факторы (вандализм, 
-                неконтролируемый туризм) и статус оцифровки памятников.
+                Все данные на карте проверены по материалам Википедии и официальных источников.
+                Отображены реальные памятники культурного наследия Атырауской области: 
+                городище Сарайшык, Успенский собор, мавзолей Курмангазы и другие объекты.
               </p>
             </motion.div>
           </div>
