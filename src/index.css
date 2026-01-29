@@ -185,6 +185,8 @@
 .leaflet-container {
   font-family: 'Inter', sans-serif;
   border-radius: var(--radius);
+  /* Фон Leaflet-прослойки прозрачный, чтобы не спорил с общим фоном */
+  background: transparent !important;
 }
 
 .leaflet-popup-content-wrapper {
