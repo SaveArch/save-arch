@@ -5,19 +5,19 @@ import { motion } from 'framer-motion';
 import { MapPin, Layers, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
 const MapPage = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
         <section className="section-padding">
           <div className="container-main">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-center mb-8"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} className="text-center mb-8">
               <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6">
                 <Layers className="w-8 h-8 text-primary" />
               </div>
@@ -33,42 +33,52 @@ const MapPage = () => {
             </motion.div>
 
             {/* Key Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-10"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.1
+          }} className="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-10">
               <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
-                <p className="text-2xl font-bold text-destructive">2</p>
+                <p className="text-2xl font-bold text-destructive">3</p>
                 <p className="text-xs text-muted-foreground">Под угрозой</p>
               </div>
               <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
-                <p className="text-2xl font-bold text-orange-500">2</p>
+                <p className="text-2xl font-bold text-orange-500">3</p>
                 <p className="text-xs text-muted-foreground">Мониторинг</p>
               </div>
               <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
-                <p className="text-2xl font-bold text-primary">2</p>
+                <p className="text-2xl font-bold text-primary">3</p>
                 <p className="text-xs text-muted-foreground">Оцифровано</p>
               </div>
             </motion.div>
 
             {/* Conceptual Map */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            scale: 0.98
+          }} animate={{
+            opacity: 1,
+            scale: 1
+          }} transition={{
+            delay: 0.2
+          }}>
               <AtyrauMapbox />
             </motion.div>
 
             {/* Action Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-wrap justify-center gap-4 mt-10"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            delay: 0.3
+          }} className="flex flex-wrap justify-center gap-4 mt-10">
               <Link to="/report">
                 <Button className="btn-hero gap-2">
                   <MapPin className="w-5 h-5" />
@@ -84,12 +94,13 @@ const MapPage = () => {
             </motion.div>
 
             {/* Info Note */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="mt-12 p-6 bg-card/70 backdrop-blur-sm rounded-2xl border border-border max-w-2xl mx-auto shadow-sm"
-            >
+            <motion.div initial={{
+            opacity: 0
+          }} animate={{
+            opacity: 1
+          }} transition={{
+            delay: 0.4
+          }} className="mt-12 p-6 bg-card/70 backdrop-blur-sm rounded-2xl border border-border max-w-2xl mx-auto shadow-sm">
               <h3 className="font-semibold text-foreground mb-2 text-center">
                 О системе мониторинга
               </h3>
@@ -103,8 +114,6 @@ const MapPage = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default MapPage;
