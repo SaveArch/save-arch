@@ -8,7 +8,7 @@ const ArchaeologyBackground = ({ opacity = 0.1 }: ArchaeologyBackgroundProps) =>
     <div
       className="fixed inset-0 pointer-events-none"
       // Keep it visible over all surfaces while staying non-interactive
-      style={{ zIndex: 5, opacity }}
+      style={{ zIndex: 0, opacity }}
       aria-hidden="true"
     >
       <svg
