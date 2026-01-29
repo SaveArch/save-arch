@@ -17,6 +17,27 @@ interface HeritageMarker {
   historicalInfo?: string;
   images?: string[];
 }
+// Image mapping for each monument marker (UI-only, не влияет на данные карты)
+const markerImagesById: Record<string, string[]> = {
+  // 1 — Городище Сарайшык
+  '1': ['/monuments/sarayshyk-excavation.jpg'],
+  // 2 — Статуя Христа-Искупителя
+  '2': ['/monuments/christ-the-redeemer.jpg'],
+  // 3 — Памятник Исатаю Тайманову и Махамбету Утемисову
+  '3': ['/monuments/isatay-mahambet-memorial.jpg'],
+  // 4 — Висячие сады Семирамиды
+  '4': ['/monuments/hanging-gardens.jpg'],
+  // 5 — Статуя Свободы
+  '5': ['/monuments/statue-of-liberty.jpg'],
+  // 6 — Эйфелева башня
+  '6': ['/monuments/eiffel-tower.jpg'],
+  // 7 — Пирамида Хеопса
+  '7': ['/monuments/great-pyramid.jpg'],
+  // 8 — Александрийский маяк
+  '8': ['/monuments/ancient-lighthouse.jpg'],
+  // 9 — Монумент «Қазақ елі»
+  '9': ['/monuments/qazaq-eli-monument.jpg'],
+};
 
 // Проверенные маркеры культурного наследия Атырауской области
 // Источники: Wikipedia, Wikimedia Commons, официальные реестры
@@ -348,6 +369,19 @@ export const AtyrauMapbox = ({ className = '' }: AtyrauMapboxProps) => {
                   {selectedMarker.description}
                 </DialogDescription>
               </DialogHeader>
+              {/* Monument photo */}
+{markerImagesById[selectedMarker.id] && (
+  <div className="mt-4 rounded-2xl overflow-hidden shadow-card border border-border bg-card">
+    <div className="relative w-full aspect-[4/3]">
+      <img
+        src={markerImagesById[selectedMarker.id][currentImageIndex]}
+        alt={selectedMarker.title}
+        className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  </div>
+)}
 
               {/* Date info */}
               <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
