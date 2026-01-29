@@ -15,6 +15,7 @@ interface HeritageMarker {
   date: string;
   status: string;
   historicalInfo?: string;
+  images?: string[];
 }
 
 // Проверенные маркеры культурного наследия Атырауской области
