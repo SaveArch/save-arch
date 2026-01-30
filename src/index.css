@@ -10,8 +10,8 @@
     --background: 35 32% 92%;
     --foreground: 220 25% 14%;
 
-    /* Текстура пергамента / песка */
-    --bg-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='38%25' r='75%25'%3E%3Cstop offset='0%25' stop-color='%23f6ecda'/%3E%3Cstop offset='45%25' stop-color='%23efe0c6'/%3E%3Cstop offset='100%25' stop-color='%23e0cfaf'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='160' height='160' fill='url(%23g)'/%3E%3Cg fill='%2394765b' fill-opacity='0.22'%3E%3Ccircle cx='18' cy='22' r='1.3'/%3E%3Ccircle cx='46' cy='12' r='0.9'/%3E%3Ccircle cx='88' cy='34' r='1.1'/%3E%3Ccircle cx='132' cy='18' r='1.2'/%3E%3Ccircle cx='142' cy='62' r='1.1'/%3E%3Ccircle cx='28' cy='78' r='1.4'/%3E%3Ccircle cx='70' cy='96' r='1.2'/%3E%3Ccircle cx='112' cy='104' r='1'/%3E%3Ccircle cx='24' cy='132' r='1.1'/%3E%3Ccircle cx='96' cy='142' r='0.9'/%3E%3C/g%3E%3C/svg%3E");
+    /* Археологическая текстура с артефактами */
+    --bg-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cdefs%3E%3CradialGradient id='sand' cx='50%25' cy='38%25' r='75%25'%3E%3Cstop offset='0%25' stop-color='%23f6ecda'/%3E%3Cstop offset='45%25' stop-color='%23efe0c6'/%3E%3Cstop offset='100%25' stop-color='%23e0cfaf'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23sand)'/%3E%3Cg fill='%238b7355' fill-opacity='0.08' stroke='%238b7355' stroke-opacity='0.06' stroke-width='0.5'%3E%3C!-- Череп 1 --%3E%3Cellipse cx='45' cy='50' rx='12' ry='14'/%3E%3Cellipse cx='40' cy='47' rx='3' ry='4'/%3E%3Cellipse cx='50' cy='47' rx='3' ry='4'/%3E%3Cpath d='M42 56 L45 60 L48 56' fill='none'/%3E%3C!-- Глиняный горшок --%3E%3Cpath d='M320 80 Q310 90 312 110 Q314 130 330 130 Q346 130 348 110 Q350 90 340 80 Z'/%3E%3Cellipse cx='330' cy='80' rx='12' ry='4'/%3E%3Cpath d='M318 95 Q330 100 342 95' fill='none'/%3E%3C!-- Кости --%3E%3Cpath d='M180 160 Q175 155 170 160 L200 165 Q205 160 200 155 Q195 160 200 165' fill='none' stroke-width='2'/%3E%3Ccircle cx='172' cy='158' r='3'/%3E%3Ccircle cx='198' cy='158' r='3'/%3E%3C!-- Наконечник стрелы --%3E%3Cpath d='M90 200 L100 185 L110 200 L100 195 Z'/%3E%3C!-- Раскоп (сетка) --%3E%3Crect x='250' y='180' width='60' height='60' fill='none' stroke-width='1'/%3E%3Cline x1='270' y1='180' x2='270' y2='240'/%3E%3Cline x1='290' y1='180' x2='290' y2='240'/%3E%3Cline x1='250' y1='200' x2='310' y2='200'/%3E%3Cline x1='250' y1='220' x2='310' y2='220'/%3E%3C!-- Амфора --%3E%3Cpath d='M55 280 Q45 290 48 320 Q50 345 65 350 Q80 345 82 320 Q85 290 75 280' fill='none' stroke-width='1.5'/%3E%3Cellipse cx='65' cy='278' rx='12' ry='5'/%3E%3Cpath d='M48 295 Q40 290 38 300' fill='none'/%3E%3Cpath d='M82 295 Q90 290 92 300' fill='none'/%3E%3C!-- Петроглиф (олень) --%3E%3Cpath d='M350 300 L355 290 L360 285 M355 290 L350 285 M355 290 L355 310 L350 320 M355 310 L360 320 M355 295 L345 300 M355 295 L365 300' fill='none' stroke-width='1.5'/%3E%3C!-- Монета --%3E%3Ccircle cx='150' cy='320' r='15' fill='none' stroke-width='1.5'/%3E%3Ccircle cx='150' cy='320' r='11'/%3E%3Ctext x='145' y='325' font-size='12' fill='%238b7355' fill-opacity='0.1'%3EΩ%3C/text%3E%3C!-- Череп 2 (меньше) --%3E%3Cellipse cx='380' cy='45' rx='8' ry='10'/%3E%3Ccircle cx='377' cy='42' r='2'/%3E%3Ccircle cx='383' cy='42' r='2'/%3E%3C!-- Фрагмент керамики --%3E%3Cpath d='M20 150 Q30 145 35 155 Q32 165 22 162 Z'/%3E%3Cpath d='M24 152 L30 158' fill='none'/%3E%3Cpath d='M26 156 L32 154' fill='none'/%3E%3C!-- Кисточка археолога --%3E%3Crect x='200' cy='50' width='3' height='25' rx='1'/%3E%3Cpath d='M198 75 Q201 80 204 75 L204 85 Q201 82 198 85 Z'/%3E%3C!-- Слои почвы (стратиграфия) --%3E%3Cpath d='M120 380 Q140 375 160 380 Q180 385 200 380' fill='none' stroke-width='0.8'/%3E%3Cpath d='M120 390 Q145 387 170 392 Q195 388 220 390' fill='none' stroke-width='0.8'/%3E%3C!-- Песочные частицы --%3E%3Ccircle cx='18' cy='22' r='1.3'/%3E%3Ccircle cx='88' cy='34' r='1.1'/%3E%3Ccircle cx='142' cy='62' r='1.1'/%3E%3Ccircle cx='28' cy='128' r='1.4'/%3E%3Ccircle cx='270' cy='96' r='1.2'/%3E%3Ccircle cx='312' cy='54' r='1'/%3E%3Ccircle cx='224' cy='132' r='1.1'/%3E%3Ccircle cx='96' cy='342' r='0.9'/%3E%3Ccircle cx='375' cy='180' r='1.2'/%3E%3Ccircle cx='45' cy='380' r='1'/%3E%3C!-- Каменный нож --%3E%3Cpath d='M330 350 L345 340 L348 345 L335 360 Z' stroke-width='1'/%3E%3C!-- Рыбья кость --%3E%3Cpath d='M170 250 L190 250 M175 247 L175 253 M180 246 L180 254 M185 247 L185 253' fill='none' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
 
     --card: 35 30% 97%;
     --card-foreground: 220 25% 15%;
@@ -120,19 +120,19 @@
     /* Базовый тёплый фон пергамента */
     background-color: hsl(var(--background));
 
-    /* Многослойный археологический фон */
+    /* Многослойный археологический фон с артефактами */
     background-image:
-      radial-gradient(circle at 10% 0%, rgba(140, 104, 70, 0.20) 0, transparent 55%),
-      radial-gradient(circle at 90% 100%, rgba(89, 70, 48, 0.24) 0, transparent 55%),
-      linear-gradient(180deg, rgba(116, 90, 60, 0.20) 0, transparent 26%, transparent 74%, rgba(88, 66, 45, 0.18) 100%),
+      radial-gradient(circle at 10% 0%, rgba(140, 104, 70, 0.15) 0, transparent 50%),
+      radial-gradient(circle at 90% 100%, rgba(89, 70, 48, 0.18) 0, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(180, 150, 110, 0.08) 0, transparent 70%),
       var(--bg-texture);
 
     background-attachment: fixed;
     background-size:
-      140% 140%,
-      140% 140%,
       100% 100%,
-      360px 360px;
+      100% 100%,
+      100% 100%,
+      400px 400px;
 
     color: hsl(var(--foreground));
   }
