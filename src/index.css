@@ -162,13 +162,32 @@
     @apply border-border;
   }
 
-  body {
-    @apply text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
-    /* Мягкий музейный фон: пергамент + тонкая архео‑текстура */
-    background: var(--gradient-parchment);
-    background-attachment: fixed;
-    background-image: var(--gradient-parchment), var(--bg-texture);
+ body {
+  @apply text-foreground font-sans antialiased;
+  font-family: 'Inter', sans-serif;
+
+  /* Базовый тёплый фон пергамента */
+  background-color: hsl(var(--background));
+
+  /* Многослойный археологический фон:
+     1) лёгкая виньетка по краям,
+     2) полосы наподобие старых свитков,
+     3) шум/зерно песка. */
+  background-image:
+    radial-gradient(circle at 10% 0%, rgba(140, 104, 70, 0.20) 0, transparent 55%),
+    radial-gradient(circle at 90% 100%, rgba(89, 70, 48, 0.24) 0, transparent 55%),
+    linear-gradient(180deg, rgba(116, 90, 60, 0.20) 0, transparent 26%, transparent 74%, rgba(88, 66, 45, 0.18) 100%),
+    var(--bg-texture);
+
+  background-attachment: fixed;
+  background-size:
+    140% 140%,
+    140% 140%,
+    100% 100%,
+    360px 360px;
+
+  /* Чуть приглушаем контент, чтобы всё смотрелось как экспозиция музея */
+  color: hsl(var(--foreground));
 }
 
   h1, h2, h3, h4, h5, h6 {
