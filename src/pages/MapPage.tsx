@@ -9,7 +9,7 @@ const MapPage = () => {
   return <div className="min-h-screen">
       <Navigation />
       <main className="pt-16">
-        <section className="section-padding">
+        <section className="section-padding clean-section">
           <div className="container-main">
             <motion.div initial={{
             opacity: 0,
