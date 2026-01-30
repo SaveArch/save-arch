@@ -43,15 +43,15 @@ const MapPage = () => {
             delay: 0.1
           }} className="grid grid-cols-3 gap-4 max-w-lg mx-auto mb-10">
               <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
-                <p className="text-2xl font-bold text-destructive">3</p>
+                <p className="text-2xl font-bold text-destructive">4</p>
                 <p className="text-xs text-muted-foreground">Под угрозой</p>
               </div>
               <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
-                <p className="text-2xl font-bold text-orange-500">3</p>
+                <p className="text-2xl font-bold text-orange-500">4</p>
                 <p className="text-xs text-muted-foreground">Мониторинг</p>
               </div>
               <div className="text-center p-4 bg-card/80 backdrop-blur-sm rounded-xl border border-border shadow-sm">
-                <p className="text-2xl font-bold text-primary">3</p>
+                <p className="text-2xl font-bold text-primary">4</p>
                 <p className="text-xs text-muted-foreground">Оцифровано</p>
               </div>
             </motion.div>
