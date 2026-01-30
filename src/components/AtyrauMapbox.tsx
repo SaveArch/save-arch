@@ -21,22 +21,28 @@ interface HeritageMarker {
 const markerImagesById: Record<string, string[]> = {
   // 1 — Городище Сарайшык
   '1': ['/monuments/sarayshyk-excavation.jpg'],
-  // 2 — Статуя Христа-Искупителя
-  '2': ['/monuments/christ-the-redeemer.jpg'],
-  // 3 — Памятник Исатаю Тайманову и Махамбету Утемисову
-  '3': ['/monuments/isatay-mahambet-memorial.jpg'],
+  // 2 — Мачу-Пикчу
+  '2': ['/monuments/machu-picchu.jpg'],
+  // 3 — Петроглифы Тамгалы
+  '3': ['/monuments/tamgaly.jpg'],
   // 4 — Висячие сады Семирамиды
   '4': ['/monuments/hanging-gardens.jpg'],
-  // 5 — Статуя Свободы
-  '5': ['/monuments/statue-of-liberty.jpg'],
-  // 6 — Эйфелева башня
-  '6': ['/monuments/eiffel-tower.jpg'],
+  // 5 — Стоунхендж
+  '5': ['/monuments/stounhandge.jpg'],
+  // 6 — Колизей
+  '6': ['/monuments/collizeum.jpg'],
   // 7 — Пирамида Хеопса
   '7': ['/monuments/great-pyramid.jpg'],
   // 8 — Александрийский маяк
   '8': ['/monuments/ancient-lighthouse.jpg'],
-  // 9 — Монумент «Қазақ елі»
-  '9': ['/monuments/qazaq-eli-monument.jpg'],
+  // 9 — Городище Бозок
+  '9': ['/monuments/bozok.jpg'],
+  // 10 — Великая Китайская Стена
+ '10': ['/monuments/china.jpg'],
+  // 11 — Мавзолей Ходжи Ахмеда-Ясауи
+ '11': ['/monuments/ahmed.jpg'],
+  // 12 — Меса-Верде
+ '12': ['/monuments/mesa-verde.jpg'],
 };
 
 // Проверенные маркеры культурного наследия Атырауской области
