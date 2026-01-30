@@ -68,7 +68,7 @@ export const DigitizationUpload = () => {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
-        className="card-heritage p-6 md:p-8"
+        className="card-heritage p-6 md:p-8 clean-section !rounded-2xl"
       >
         <h3 className="font-serif text-2xl font-bold mb-6">Инструкция по съёмке</h3>
         <div className="space-y-4">
@@ -98,7 +98,7 @@ export const DigitizationUpload = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         onSubmit={handleUpload}
-        className="card-heritage p-6 md:p-8"
+        className="card-heritage p-6 md:p-8 clean-section !rounded-2xl"
       >
         <h3 className="font-serif text-2xl font-bold mb-6">Загрузить фотографии</h3>
 

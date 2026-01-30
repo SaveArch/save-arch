@@ -358,7 +358,7 @@ export const AtyrauMapbox = ({ className = '' }: AtyrauMapboxProps) => {
   return (
     <div className={`relative ${className}`}>
       {/* Map Container with solid background to hide pattern */}
-      <div className="relative bg-background rounded-2xl overflow-hidden shadow-card border border-border">
+      <div className="relative clean-section rounded-2xl overflow-hidden shadow-card border border-border">
         <div 
           ref={mapContainer} 
           className="w-full h-[500px] md:h-[600px]"

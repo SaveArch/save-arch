@@ -89,7 +89,7 @@ export const ReportForm = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       onSubmit={handleSubmit}
-      className="card-heritage p-6 md:p-8 max-w-2xl mx-auto"
+      className="card-heritage p-6 md:p-8 max-w-2xl mx-auto clean-section !rounded-2xl"
     >
       <div className="flex items-center gap-3 mb-6">
         <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center">
