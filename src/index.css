@@ -10,8 +10,8 @@
     --background: 35 32% 92%;
     --foreground: 220 25% 14%;
 
-    /* Археологическая текстура с артефактами */
-    --bg-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cdefs%3E%3CradialGradient id='sand' cx='50%25' cy='38%25' r='75%25'%3E%3Cstop offset='0%25' stop-color='%23f6ecda'/%3E%3Cstop offset='45%25' stop-color='%23efe0c6'/%3E%3Cstop offset='100%25' stop-color='%23e0cfaf'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23sand)'/%3E%3Cg fill='%238b7355' fill-opacity='0.08' stroke='%238b7355' stroke-opacity='0.06' stroke-width='0.5'%3E%3C!-- Череп 1 --%3E%3Cellipse cx='45' cy='50' rx='12' ry='14'/%3E%3Cellipse cx='40' cy='47' rx='3' ry='4'/%3E%3Cellipse cx='50' cy='47' rx='3' ry='4'/%3E%3Cpath d='M42 56 L45 60 L48 56' fill='none'/%3E%3C!-- Глиняный горшок --%3E%3Cpath d='M320 80 Q310 90 312 110 Q314 130 330 130 Q346 130 348 110 Q350 90 340 80 Z'/%3E%3Cellipse cx='330' cy='80' rx='12' ry='4'/%3E%3Cpath d='M318 95 Q330 100 342 95' fill='none'/%3E%3C!-- Кости --%3E%3Cpath d='M180 160 Q175 155 170 160 L200 165 Q205 160 200 155 Q195 160 200 165' fill='none' stroke-width='2'/%3E%3Ccircle cx='172' cy='158' r='3'/%3E%3Ccircle cx='198' cy='158' r='3'/%3E%3C!-- Наконечник стрелы --%3E%3Cpath d='M90 200 L100 185 L110 200 L100 195 Z'/%3E%3C!-- Раскоп (сетка) --%3E%3Crect x='250' y='180' width='60' height='60' fill='none' stroke-width='1'/%3E%3Cline x1='270' y1='180' x2='270' y2='240'/%3E%3Cline x1='290' y1='180' x2='290' y2='240'/%3E%3Cline x1='250' y1='200' x2='310' y2='200'/%3E%3Cline x1='250' y1='220' x2='310' y2='220'/%3E%3C!-- Амфора --%3E%3Cpath d='M55 280 Q45 290 48 320 Q50 345 65 350 Q80 345 82 320 Q85 290 75 280' fill='none' stroke-width='1.5'/%3E%3Cellipse cx='65' cy='278' rx='12' ry='5'/%3E%3Cpath d='M48 295 Q40 290 38 300' fill='none'/%3E%3Cpath d='M82 295 Q90 290 92 300' fill='none'/%3E%3C!-- Петроглиф (олень) --%3E%3Cpath d='M350 300 L355 290 L360 285 M355 290 L350 285 M355 290 L355 310 L350 320 M355 310 L360 320 M355 295 L345 300 M355 295 L365 300' fill='none' stroke-width='1.5'/%3E%3C!-- Монета --%3E%3Ccircle cx='150' cy='320' r='15' fill='none' stroke-width='1.5'/%3E%3Ccircle cx='150' cy='320' r='11'/%3E%3Ctext x='145' y='325' font-size='12' fill='%238b7355' fill-opacity='0.1'%3EΩ%3C/text%3E%3C!-- Череп 2 (меньше) --%3E%3Cellipse cx='380' cy='45' rx='8' ry='10'/%3E%3Ccircle cx='377' cy='42' r='2'/%3E%3Ccircle cx='383' cy='42' r='2'/%3E%3C!-- Фрагмент керамики --%3E%3Cpath d='M20 150 Q30 145 35 155 Q32 165 22 162 Z'/%3E%3Cpath d='M24 152 L30 158' fill='none'/%3E%3Cpath d='M26 156 L32 154' fill='none'/%3E%3C!-- Кисточка археолога --%3E%3Crect x='200' cy='50' width='3' height='25' rx='1'/%3E%3Cpath d='M198 75 Q201 80 204 75 L204 85 Q201 82 198 85 Z'/%3E%3C!-- Слои почвы (стратиграфия) --%3E%3Cpath d='M120 380 Q140 375 160 380 Q180 385 200 380' fill='none' stroke-width='0.8'/%3E%3Cpath d='M120 390 Q145 387 170 392 Q195 388 220 390' fill='none' stroke-width='0.8'/%3E%3C!-- Песочные частицы --%3E%3Ccircle cx='18' cy='22' r='1.3'/%3E%3Ccircle cx='88' cy='34' r='1.1'/%3E%3Ccircle cx='142' cy='62' r='1.1'/%3E%3Ccircle cx='28' cy='128' r='1.4'/%3E%3Ccircle cx='270' cy='96' r='1.2'/%3E%3Ccircle cx='312' cy='54' r='1'/%3E%3Ccircle cx='224' cy='132' r='1.1'/%3E%3Ccircle cx='96' cy='342' r='0.9'/%3E%3Ccircle cx='375' cy='180' r='1.2'/%3E%3Ccircle cx='45' cy='380' r='1'/%3E%3C!-- Каменный нож --%3E%3Cpath d='M330 350 L345 340 L348 345 L335 360 Z' stroke-width='1'/%3E%3C!-- Рыбья кость --%3E%3Cpath d='M170 250 L190 250 M175 247 L175 253 M180 246 L180 254 M185 247 L185 253' fill='none' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E");
+    /* Археологическая текстура с артефактами - ЗАМЕТНАЯ */
+    --bg-texture: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Cdefs%3E%3CradialGradient id='sand' cx='50%25' cy='38%25' r='75%25'%3E%3Cstop offset='0%25' stop-color='%23f6ecda'/%3E%3Cstop offset='45%25' stop-color='%23efe0c6'/%3E%3Cstop offset='100%25' stop-color='%23e0cfaf'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='500' height='500' fill='url(%23sand)'/%3E%3Cg fill='%23a08060' fill-opacity='0.25' stroke='%238b7355' stroke-opacity='0.2' stroke-width='1'%3E%3C!-- Череп 1 (крупный) --%3E%3Cellipse cx='60' cy='70' rx='22' ry='26'/%3E%3Cellipse cx='52' cy='62' rx='5' ry='7' fill='%23705840' fill-opacity='0.3'/%3E%3Cellipse cx='68' cy='62' rx='5' ry='7' fill='%23705840' fill-opacity='0.3'/%3E%3Cpath d='M55 80 L60 88 L65 80' fill='none' stroke-width='2'/%3E%3Cpath d='M50 90 L52 95 L56 92 L60 96 L64 92 L68 95 L70 90' fill='none' stroke-width='1.5'/%3E%3C!-- Глиняный горшок с орнаментом --%3E%3Cpath d='M400 100 Q385 115 388 145 Q392 175 415 180 Q438 175 442 145 Q445 115 430 100 Z' stroke-width='1.5'/%3E%3Cellipse cx='415' cy='100' rx='18' ry='6'/%3E%3Cpath d='M392 125 Q415 130 438 125' fill='none'/%3E%3Cpath d='M394 140 Q415 145 436 140' fill='none'/%3E%3Cpath d='M396 155 Q415 158 434 155' fill='none'/%3E%3C!-- Длинные кости --%3E%3Cpath d='M220 200 L280 195' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='218' cy='198' r='6'/%3E%3Ccircle cx='222' cy='203' r='5'/%3E%3Ccircle cx='280' cy='193' r='6'/%3E%3Ccircle cx='282' cy='198' r='5'/%3E%3C!-- Наконечник копья --%3E%3Cpath d='M120 280 L145 240 L170 280 L145 270 Z' stroke-width='1.5'/%3E%3Cline x1='145' y1='280' x2='145' y2='320' stroke-width='3'/%3E%3C!-- Раскоп (археологическая сетка) --%3E%3Crect x='300' y='220' width='90' height='90' fill='%23c4a882' fill-opacity='0.15' stroke-width='2'/%3E%3Cline x1='330' y1='220' x2='330' y2='310' stroke-width='1'/%3E%3Cline x1='360' y1='220' x2='360' y2='310' stroke-width='1'/%3E%3Cline x1='300' y1='250' x2='390' y2='250' stroke-width='1'/%3E%3Cline x1='300' y1='280' x2='390' y2='280' stroke-width='1'/%3E%3Ccircle cx='315' cy='235' r='4' fill='%23705840' fill-opacity='0.4'/%3E%3Ccircle cx='375' cy='295' r='6' fill='%23705840' fill-opacity='0.3'/%3E%3C!-- Большая амфора --%3E%3Cpath d='M70 350 Q50 370 55 420 Q60 465 85 475 Q110 465 115 420 Q120 370 100 350' fill='none' stroke-width='2'/%3E%3Cellipse cx='85' cy='348' rx='18' ry='7'/%3E%3Cpath d='M55 380 Q40 370 35 385' fill='none' stroke-width='2'/%3E%3Cpath d='M115 380 Q130 370 135 385' fill='none' stroke-width='2'/%3E%3Cpath d='M62 400 Q85 408 108 400' fill='none'/%3E%3Cpath d='M60 430 Q85 440 110 430' fill='none'/%3E%3C!-- Петроглиф (олень) --%3E%3Cpath d='M430 380 L440 360 L450 350 M440 360 L430 350 M440 360 L440 400 L430 420 M440 400 L450 420 M440 375 L420 385 M440 375 L460 385' fill='none' stroke-width='2.5'/%3E%3C!-- Древняя монета --%3E%3Ccircle cx='200' cy='420' r='25' fill='%23c4a060' fill-opacity='0.2' stroke-width='2'/%3E%3Ccircle cx='200' cy='420' r='18' fill='none'/%3E%3Cpath d='M190 415 L195 425 L210 410' fill='none' stroke-width='1.5'/%3E%3C!-- Череп 2 (вид сбоку) --%3E%3Cpath d='M460 60 Q480 50 485 70 Q490 95 475 100 Q460 100 455 85 Q450 70 460 60 Z' stroke-width='1.5'/%3E%3Ccircle cx='472' cy='72' r='4' fill='%23705840' fill-opacity='0.3'/%3E%3Cpath d='M458 92 L465 95 L458 98' fill='none'/%3E%3C!-- Фрагменты керамики --%3E%3Cpath d='M30 200 Q50 190 60 210 Q55 235 35 230 Q20 220 30 200 Z'/%3E%3Cpath d='M38 208 L50 218' fill='none' stroke-width='1.5'/%3E%3Cpath d='M42 215 L52 212' fill='none' stroke-width='1.5'/%3E%3Cpath d='M35 220 L48 225' fill='none' stroke-width='1.5'/%3E%3C!-- Кисточка археолога --%3E%3Crect x='250' y='60' width='5' height='35' rx='2'/%3E%3Cpath d='M247 95 L250 105 L252 95 L255 105 L258 95' fill='none' stroke-width='1.5'/%3E%3C!-- Лопата --%3E%3Crect x='175' y='80' width='25' height='6' rx='1'/%3E%3Cline x1='188' y1='86' x2='188' y2='130' stroke-width='3'/%3E%3C!-- Стратиграфия (слои почвы) --%3E%3Cpath d='M150 480 Q200 470 250 482 Q300 475 350 485' fill='none' stroke-width='2' stroke-opacity='0.3'/%3E%3Cpath d='M150 490 Q210 485 270 492 Q330 488 390 495' fill='none' stroke-width='2' stroke-opacity='0.25'/%3E%3C!-- Рыбьи кости --%3E%3Cpath d='M320 400 L360 400' stroke-width='2'/%3E%3Cpath d='M330 395 L330 405 M340 393 L340 407 M350 395 L350 405' fill='none' stroke-width='1.5'/%3E%3Cpath d='M320 398 L315 395 M320 402 L315 405' fill='none'/%3E%3C!-- Каменный топор --%3E%3Cellipse cx='480' cy='180' rx='20' ry='12' transform='rotate(-30 480 180)'/%3E%3Cline x1='465' y1='192' x2='445' y2='220' stroke-width='4'/%3E%3C!-- Песочные частицы (много) --%3E%3Ccircle cx='18' cy='32' r='2'/%3E%3Ccircle cx='98' cy='44' r='1.5'/%3E%3Ccircle cx='182' cy='152' r='2'/%3E%3Ccircle cx='38' cy='148' r='2.5'/%3E%3Ccircle cx='290' cy='126' r='1.8'/%3E%3Ccircle cx='342' cy='74' r='2'/%3E%3Ccircle cx='264' cy='152' r='1.5'/%3E%3Ccircle cx='126' cy='382' r='2'/%3E%3Ccircle cx='395' cy='450' r='2.2'/%3E%3Ccircle cx='475' cy='280' r='1.8'/%3E%3Ccircle cx='55' cy='480' r='2'/%3E%3Ccircle cx='240' cy='340' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
 
     --card: 35 30% 97%;
     --card-foreground: 220 25% 15%;
@@ -120,11 +120,11 @@
     /* Базовый тёплый фон пергамента */
     background-color: hsl(var(--background));
 
-    /* Многослойный археологический фон с артефактами */
+    /* Многослойный археологический фон с заметными артефактами */
     background-image:
-      radial-gradient(circle at 10% 0%, rgba(140, 104, 70, 0.15) 0, transparent 50%),
-      radial-gradient(circle at 90% 100%, rgba(89, 70, 48, 0.18) 0, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(180, 150, 110, 0.08) 0, transparent 70%),
+      radial-gradient(ellipse at 15% 10%, rgba(160, 120, 80, 0.18) 0, transparent 45%),
+      radial-gradient(ellipse at 85% 90%, rgba(120, 90, 60, 0.2) 0, transparent 45%),
+      radial-gradient(ellipse at 50% 50%, rgba(200, 170, 130, 0.1) 0, transparent 60%),
       var(--bg-texture);
 
     background-attachment: fixed;
@@ -132,7 +132,7 @@
       100% 100%,
       100% 100%,
       100% 100%,
-      400px 400px;
+      500px 500px;
 
     color: hsl(var(--foreground));
   }
@@ -143,6 +143,26 @@
 }
 
 @layer components {
+  /* Чистый фон для секций, где паттерн мешает */
+  .clean-section {
+    position: relative;
+    background: linear-gradient(180deg, hsl(35 30% 96%) 0%, hsl(35 28% 94%) 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 -1px 0 rgba(0,0,0,0.05);
+  }
+
+  .clean-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: hsl(35 30% 96% / 0.98);
+    z-index: 0;
+  }
+
+  .clean-section > * {
+    position: relative;
+    z-index: 1;
+  }
+
   .btn-hero {
     @apply bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg
            shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105

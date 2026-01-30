@@ -58,7 +58,7 @@ export const MonumentAnalyzer = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="card-heritage p-6 md:p-8"
+      className="card-heritage p-6 md:p-8 clean-section"
     >
       <div className="flex items-center gap-3 mb-6">
         <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
