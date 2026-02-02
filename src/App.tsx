@@ -19,7 +19,7 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <ArchaeologyBackground opacity={0.22} />
+      <ArchaeologyBackground opacity={0.45} />
       <Toaster />
       <Sonner />
       <BrowserRouter>

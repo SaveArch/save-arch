@@ -15,9 +15,9 @@ const ArchaeologyBackground = ({ opacity = 0.18 }: ArchaeologyBackgroundProps) =
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(ellipse at 20% 15%, rgba(180, 140, 90, 0.25) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 85%, rgba(150, 110, 70, 0.3) 0%, transparent 50%),
-            radial-gradient(ellipse at 50% 50%, rgba(200, 170, 130, 0.15) 0%, transparent 70%)
+            radial-gradient(ellipse at 20% 15%, rgba(160, 120, 70, 0.35) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 85%, rgba(140, 100, 60, 0.4) 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, rgba(180, 150, 110, 0.25) 0%, transparent 70%)
           `
         }}
       />
@@ -41,13 +41,13 @@ const ArchaeologyBackground = ({ opacity = 0.18 }: ArchaeologyBackgroundProps) =
             <rect width="450" height="450" fill="transparent" />
             
             <g
-              fill="hsl(35 40% 45%)"
-              fillOpacity="0.35"
-              stroke="hsl(30 35% 40%)"
-              strokeWidth="1.5"
+              fill="hsl(30 45% 40%)"
+              fillOpacity="0.55"
+              stroke="hsl(25 40% 35%)"
+              strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeOpacity="0.4"
+              strokeOpacity="0.6"
             >
               {/* === SKULL (большой, детальный) === */}
               <ellipse cx="70" cy="65" rx="28" ry="32" />
@@ -155,22 +155,22 @@ const ArchaeologyBackground = ({ opacity = 0.18 }: ArchaeologyBackgroundProps) =
             </g>
 
             {/* === SAND/DUST PARTICLES === */}
-            <g fill="hsl(35 40% 50%)" fillOpacity="0.15">
-              <circle cx="20" cy="40" r="2.5" />
-              <circle cx="130" cy="60" r="2" />
-              <circle cx="220" cy="45" r="3" />
-              <circle cx="180" cy="110" r="2" />
-              <circle cx="50" cy="160" r="2.5" />
-              <circle cx="250" cy="200" r="2" />
-              <circle cx="150" cy="250" r="3" />
-              <circle cx="380" cy="170" r="2" />
-              <circle cx="290" cy="300" r="2.5" />
-              <circle cx="120" cy="350" r="2" />
-              <circle cx="340" cy="400" r="2.5" />
-              <circle cx="200" cy="380" r="2" />
-              <circle cx="440" cy="100" r="2" />
-              <circle cx="10" cy="280" r="2.5" />
-              <circle cx="440" cy="300" r="2" />
+            <g fill="hsl(30 45% 45%)" fillOpacity="0.3">
+              <circle cx="20" cy="40" r="3" />
+              <circle cx="130" cy="60" r="2.5" />
+              <circle cx="220" cy="45" r="3.5" />
+              <circle cx="180" cy="110" r="2.5" />
+              <circle cx="50" cy="160" r="3" />
+              <circle cx="250" cy="200" r="2.5" />
+              <circle cx="150" cy="250" r="3.5" />
+              <circle cx="380" cy="170" r="2.5" />
+              <circle cx="290" cy="300" r="3" />
+              <circle cx="120" cy="350" r="2.5" />
+              <circle cx="340" cy="400" r="3" />
+              <circle cx="200" cy="380" r="2.5" />
+              <circle cx="440" cy="100" r="2.5" />
+              <circle cx="10" cy="280" r="3" />
+              <circle cx="440" cy="300" r="2.5" />
             </g>
           </pattern>
         </defs>
