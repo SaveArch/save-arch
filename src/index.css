@@ -116,24 +116,7 @@
   body {
     @apply text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
-
-    /* Базовый тёплый фон пергамента */
     background-color: hsl(var(--background));
-
-    /* Многослойный археологический фон с заметными артефактами */
-    background-image:
-      radial-gradient(ellipse at 15% 10%, rgba(160, 120, 80, 0.18) 0, transparent 45%),
-      radial-gradient(ellipse at 85% 90%, rgba(120, 90, 60, 0.2) 0, transparent 45%),
-      radial-gradient(ellipse at 50% 50%, rgba(200, 170, 130, 0.1) 0, transparent 60%),
-      var(--bg-texture);
-
-    background-attachment: fixed;
-    background-size:
-      100% 100%,
-      100% 100%,
-      100% 100%,
-      500px 500px;
-
     color: hsl(var(--foreground));
   }
 
