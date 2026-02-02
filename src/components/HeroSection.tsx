@@ -5,16 +5,65 @@ import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center gradient-hero overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Archaeological Hero Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-amber-100/90 via-orange-50/80 to-amber-50/70" />
+      
+      {/* Large Archaeological SVG Pattern */}
+      <div className="absolute inset-0 opacity-50">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="hero-archaeology" x="0" y="0" width="300" height="300" patternUnits="userSpaceOnUse">
+              {/* Excavation grid */}
+              <rect x="20" y="20" width="80" height="80" rx="4" fill="none" stroke="hsl(30 50% 40%)" strokeWidth="2" strokeOpacity="0.4" />
+              <line x1="46" y1="20" x2="46" y2="100" stroke="hsl(30 50% 40%)" strokeWidth="1" strokeOpacity="0.3" />
+              <line x1="73" y1="20" x2="73" y2="100" stroke="hsl(30 50% 40%)" strokeWidth="1" strokeOpacity="0.3" />
+              <line x1="20" y1="46" x2="100" y2="46" stroke="hsl(30 50% 40%)" strokeWidth="1" strokeOpacity="0.3" />
+              <line x1="20" y1="73" x2="100" y2="73" stroke="hsl(30 50% 40%)" strokeWidth="1" strokeOpacity="0.3" />
+              
+              {/* Skull */}
+              <ellipse cx="180" cy="60" rx="22" ry="26" fill="hsl(35 40% 50%)" fillOpacity="0.3" stroke="hsl(30 45% 40%)" strokeWidth="1.5" strokeOpacity="0.5" />
+              <ellipse cx="172" cy="52" rx="5" ry="6" fill="hsl(25 35% 35%)" fillOpacity="0.4" />
+              <ellipse cx="188" cy="52" rx="5" ry="6" fill="hsl(25 35% 35%)" fillOpacity="0.4" />
+              <path d="M176 68 L180 76 L184 68" fill="none" stroke="hsl(30 45% 40%)" strokeWidth="1.5" strokeOpacity="0.5" />
+              
+              {/* Amphora */}
+              <path d="M250 120 Q235 140 238 180 Q242 215 260 225 Q278 215 282 180 Q285 140 270 120" fill="hsl(28 50% 55%)" fillOpacity="0.25" stroke="hsl(25 45% 40%)" strokeWidth="1.5" strokeOpacity="0.5" />
+              <ellipse cx="260" cy="118" rx="14" ry="5" fill="none" stroke="hsl(25 45% 40%)" strokeWidth="1.5" strokeOpacity="0.5" />
+              <path d="M238 155 Q222 145 218 165" fill="none" stroke="hsl(25 45% 40%)" strokeWidth="2" strokeOpacity="0.4" />
+              <path d="M282 155 Q298 145 302 165" fill="none" stroke="hsl(25 45% 40%)" strokeWidth="2" strokeOpacity="0.4" />
+              
+              {/* Bone */}
+              <path d="M40 180 L110 175" stroke="hsl(35 30% 50%)" strokeWidth="4" strokeLinecap="round" strokeOpacity="0.4" />
+              <circle cx="38" cy="178" r="6" fill="hsl(35 30% 50%)" fillOpacity="0.35" />
+              <circle cx="112" cy="173" r="6" fill="hsl(35 30% 50%)" fillOpacity="0.35" />
+              
+              {/* Pottery shard */}
+              <path d="M150 200 Q175 185 190 210 Q185 240 160 245 Q135 235 150 200 Z" fill="hsl(25 55% 50%)" fillOpacity="0.2" stroke="hsl(25 50% 40%)" strokeWidth="1.5" strokeOpacity="0.4" />
+              <path d="M158 215 L180 225" fill="none" stroke="hsl(25 50% 40%)" strokeWidth="1.5" strokeOpacity="0.4" />
+              
+              {/* Spearhead */}
+              <path d="M60 230 L80 200 L100 230 L80 220 Z" fill="hsl(200 15% 50%)" fillOpacity="0.25" stroke="hsl(200 20% 40%)" strokeWidth="1.5" strokeOpacity="0.4" />
+              <line x1="80" y1="230" x2="80" y2="270" stroke="hsl(30 40% 45%)" strokeWidth="3" strokeOpacity="0.4" />
+              
+              {/* Coin */}
+              <circle cx="240" cy="270" r="18" fill="hsl(42 65% 55%)" fillOpacity="0.25" stroke="hsl(40 60% 45%)" strokeWidth="1.5" strokeOpacity="0.4" />
+              <circle cx="240" cy="270" r="12" fill="none" stroke="hsl(40 60% 45%)" strokeWidth="1" strokeOpacity="0.3" />
+              
+              {/* Sand particles */}
+              <circle cx="130" cy="140" r="3" fill="hsl(35 45% 50%)" fillOpacity="0.25" />
+              <circle cx="210" cy="165" r="2" fill="hsl(35 45% 50%)" fillOpacity="0.2" />
+              <circle cx="30" cy="260" r="2.5" fill="hsl(35 45% 50%)" fillOpacity="0.25" />
+              <circle cx="290" cy="50" r="2" fill="hsl(35 45% 50%)" fillOpacity="0.2" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#hero-archaeology)" />
+        </svg>
       </div>
+      
+      {/* Warm overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-200/30 via-transparent to-orange-200/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
 
       <div className="container-main px-4 py-24 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
