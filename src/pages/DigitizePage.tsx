@@ -1,16 +1,12 @@
-import { useSearchParams } from 'react-router-dom';
 import { Navigation } from '@/components/Navigation';
 import { Footer } from '@/components/Footer';
 import { DigitizationUpload } from '@/components/DigitizationUpload';
-import { HistoricalFacade } from '@/components/HistoricalFacade';
-import { DigitalTwinsGallery } from '@/components/DigitalTwinsGallery';
 import { MonumentAnalyzer } from '@/components/MonumentAnalyzer';
+import { VirtualPreservation } from '@/components/VirtualPreservation';
 import { motion } from 'framer-motion';
 import { Camera, Lightbulb, Shield } from 'lucide-react';
 
 const DigitizePage = () => {
-  const [searchParams] = useSearchParams();
-
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -45,7 +41,7 @@ const DigitizePage = () => {
                 { icon: Camera, title: 'Фотограмметрия', desc: '30–60 снимков с перекрытием' },
                 { icon: Lightbulb, title: 'Инновации', desc: 'Современные 3D-технологии' },
                 { icon: Shield, title: 'Сохранение', desc: 'Защита от утраты данных' },
-              ].map((item, index) => (
+              ].map((item) => (
                 <div
                   key={item.title}
                   className="flex flex-col items-center text-center p-6 bg-card/80 backdrop-blur-sm rounded-xl border border-border"
@@ -67,11 +63,8 @@ const DigitizePage = () => {
           </div>
         </section>
 
-        {/* Historical Facade Section */}
-        <HistoricalFacade />
-
-        {/* Digital Twins Gallery */}
-        <DigitalTwinsGallery />
+        {/* Virtual Preservation Section with 3D Model */}
+        <VirtualPreservation />
       </main>
       <Footer />
     </div>
