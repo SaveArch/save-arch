@@ -1,18 +1,7 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Landmark, MapPin, Info, Glasses } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from '@/components/ui/dialog';
+import { Landmark, MapPin, Info } from 'lucide-react';
 
 export const VirtualPreservation = () => {
-  const [vrDialogOpen, setVrDialogOpen] = useState(false);
-
   return (
     <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
       <div className="container-main">
@@ -68,7 +57,7 @@ export const VirtualPreservation = () => {
                     <span className="font-medium">Казахстан, Кызылординская область</span>
                   </div>
 
-                  <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-xl mb-6">
+                  <div className="flex items-start gap-3 p-4 bg-secondary/50 rounded-xl">
                     <Info className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                     <p className="text-muted-foreground leading-relaxed">
                       Мемориальный комплекс посвящён легендарному мыслителю и музыканту Коркыт Ата. 
@@ -76,15 +65,6 @@ export const VirtualPreservation = () => {
                       Цифровая 3D модель позволяет сохранять внешний вид памятника и изучать его дистанционно.
                     </p>
                   </div>
-
-                  <Button 
-                    onClick={() => setVrDialogOpen(true)}
-                    className="gap-2"
-                    size="lg"
-                  >
-                    <Glasses className="w-5 h-5" />
-                    Просмотр в VR (в разработке)
-                  </Button>
                 </div>
 
                 {/* Stats/Features */}
@@ -107,25 +87,6 @@ export const VirtualPreservation = () => {
           </div>
         </motion.div>
 
-        {/* VR Dialog */}
-        <Dialog open={vrDialogOpen} onOpenChange={setVrDialogOpen}>
-          <DialogContent className="sm:max-w-md">
-            <DialogHeader>
-              <DialogTitle className="flex items-center gap-2">
-                <Glasses className="w-5 h-5 text-primary" />
-                VR-просмотр
-              </DialogTitle>
-              <DialogDescription className="pt-4 text-base">
-                VR-просмотр памятников является будущим направлением развития платформы SaveArch.
-              </DialogDescription>
-            </DialogHeader>
-            <div className="flex justify-end mt-4">
-              <Button variant="outline" onClick={() => setVrDialogOpen(false)}>
-                Понятно
-              </Button>
-            </div>
-          </DialogContent>
-        </Dialog>
       </div>
     </section>
   );
